@@ -45,7 +45,7 @@ class ReportAccountAgedPartner(models.AbstractModel):
     def _check_date_number(self, d):
         days = 0
         end = datetime.today()
-        while d.date() <= end.date():
+        while d.date() < end.date():
             days += 1
             d += timedelta(days=1)
         return days
@@ -123,8 +123,16 @@ class ReportAccountAgedPartner(models.AbstractModel):
                         date_due = ""
 
                     nv = []
-                    nv.append(aml.invoice_id.date_invoice or "")
-                    nv.append(aml.invoice_id.date_invoice or "")
+                    nv.append(
+                        format_date(
+                            self.env, aml.invoice_id.date_invoice
+                        )
+                        or ""
+                    )
+                    nv.append(
+                        format_date(self.env, aml.invoice_id.date_due)
+                        or ""
+                    )
                     nv.append(days_due)
                     nv.append("Socio")
 
