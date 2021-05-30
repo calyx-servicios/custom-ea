@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="layout_custom_invoice">
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+    </template>
+
+    <template id="external_layout">
+
+        <!-- Multicompany -->
+        <t t-if="not o and doc">
+            <t t-set="o" t-value="doc"/>
+        </t>
+
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id.sudo()"/>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"/>
+        </t>
+
+
+        <t t-call="account_invoice_adaly_report.layout_custom_invoice">
+            <t t-raw="0"/>
+        </t>
+
+    </template>
+
+    <template id="account_invoice_custom_page" name="Page">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img t-if="res_company.logo" t-att-src="'data:image/png;base64,%s' % to_text(res_company.logo)" style="height:120px;width:120px;"/>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-md-12 text-center">
+                        <span t-esc="res_company.name" style="font-weight:bold;"/>
+                        <br/>
+                        <t t-esc="res_company.street"/>
+                        <br/>
+                        <t t-esc="res_company.state_id.name"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <table class="table table-bordered" style="width:100%;border-collapse:collapse;text-align:center;">
+                    <tr style="color:white">
+                        <th colspan="2" style="text-align:center;background:#547bbb">RUT EMISOR</th>
+                        <th colspan="2" style="text-align:center;background:#547bbb">TIPO DE DOCUMENTO</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">algo</td>
+                        <td colspan="2" style="color:red">algo</td>
+                    </tr>
+                    <tr style="color:white">
+                        <th style="text-align:center;background:#547bbb">SERIE</th>
+                        <th style="text-align:center;background:#547bbb">NÚMERO</th>
+                        <th style="text-align:center;background:#547bbb">FORMA DE PAGO</th>
+                        <th style="text-align:center;background:#547bbb">VENCIMIENTO</th>
+                    </tr>
+                    <tr>
+                        <td style="color:red">algo</td>
+                        <td style="color:red">algo</td>
+                        <td>algo</td>
+                        <td style="color:red">algo</td>
+                    </tr>
+                    <tr style="color:white">
+                        <th colspan="2" style="text-align:center;background:#547bbb">CONSUMIDOR FINAL</th>
+                        <th colspan="2" style="text-align:center;background:#547bbb">IDENTIFICADOR DE COMPRA</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">algo</td>
+                        <td colspan="2">algo</td>
+                    </tr>
+                    <tr style="color:white">
+                        <th colspan="2" style="text-align:center;background:#547bbb">NOMBRE</th>
+                        <th colspan="2" style="text-align:center;background:#547bbb">DOMICILIO</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="color:red">algo</td>
+                        <td colspan="2" style="color:red">algo</td>
+                    </tr>
+                    <tr style="color:white">
+                        <th colspan="2" style="text-align:center;background:#547bbb">FECHA DE DOCUMENTO</th>
+                        <th colspan="2" style="text-align:center;background:#547bbb">MONEDA</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="color:red">algo</td>
+                        <td colspan="2" style="color:red">algo</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered" style="width:100%;border-collapse:collapse;text-align:center;">
+                    <thead>
+                        <th>Descripción</th>
+                        <th>Uni</th>
+                        <th>*</th>
+                        <th>P. Unitario US$</th>
+                        <th>Desc</th>
+                        <th>Rec</th>
+                        <th>Cantidad</th>
+                        <th>Importe US$</th>
+                    </thead>
+                    <tbody>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <span>Subtotal gravado (22%): </span>
+            </div>
+            <div class="col-md-6">
+                <span>Total IVA (22%): </span>
+                <br/>
+                <span>Monto Total: </span>
+                <br/>
+                <span>No facturable: </span>
+                <br/>
+                <span>TOTAL A PAGAR: </span>
+            </div>
+        </div>
+
+    </template>
+
+    <template id="account_invoice_custom_document">
+        <t t-call="account_invoice_adaly_report.external_layout">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+            <div class="page">
+
+                <div class="oe_structure"/>
+                <div class="row">
+                    <div class="col-xs-12 foreign_text" style="font-size:12px;width:95%;padding-left: 25px;padding-right: 25px;">
+                        <t t-call="account_invoice_adaly_report.account_invoice_custom_page"/>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+    </template>
+
+    <template id="adaly_invoice_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="account_invoice_adaly_report.account_invoice_custom_document" t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>
