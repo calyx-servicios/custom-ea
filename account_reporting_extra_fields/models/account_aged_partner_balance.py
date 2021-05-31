@@ -103,7 +103,6 @@ class ReportAccountAgedPartner(models.AbstractModel):
             ):
                 for line in amls[values["partner_id"]]:
                     aml = line["line"]
-                    date_due = ""
                     caret_type = "account.move"
                     if aml.invoice_id:
                         date_due_invoice = datetime.strptime(
@@ -120,7 +119,7 @@ class ReportAccountAgedPartner(models.AbstractModel):
                         )
                     elif aml.payment_id:
                         caret_type = "account.payment"
-                        date_due = ""
+                        days_due = ""
 
                     nv = []
                     nv.append(
@@ -134,7 +133,7 @@ class ReportAccountAgedPartner(models.AbstractModel):
                         or ""
                     )
                     nv.append(days_due)
-                    nv.append("Socio")
+                    nv.append(aml.invoice_id.user_id.name)
 
                     for i in range(7):
                         val = (
