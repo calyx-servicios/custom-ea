@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_invoice_adaly_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-01 21:28+0000\n"
+"PO-Revision-Date: 2021-06-01 21:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "0,00"
+msgstr "0,00"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<br/>\n"
+"                                        Cta. Corriente Nro."
+msgstr "<br/>\n"
+"                                        Cta. Corriente Nro."
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<br/>\n"
+"                                        Swift"
+msgstr "<br/>\n"
+"                                        Swift"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span style=\"font-weight:bold;\">Fecha de vencimiento: 18/06/2022</span>"
+msgstr "<span style=\"font-weight:bold;\">Fecha de vencimiento: 18/06/2022</span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span style=\"font-weight:bold;\">Monto Total: </span>"
+msgstr "<span style=\"font-weight:bold;\">Monto Total: </span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span style=\"font-weight:bold;\">No facturable: </span>"
+msgstr "<span style=\"font-weight:bold;\">No facturable: </span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span style=\"font-weight:bold;\">Subtotal gravado (22%): </span>"
+msgstr "<span style=\"font-weight:bold;\">Subtotal gravado (22%): </span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span style=\"font-weight:bold;\">TOTAL A PAGAR: </span>"
+msgstr "<span style=\"font-weight:bold;\">TOTAL A PAGAR: </span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span style=\"font-weight:bold;\">Total IVA (22%): </span>"
+msgstr "<span style=\"font-weight:bold;\">Total IVA (22%): </span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span>Codigo de seguridad: kHs8Zu</span>"
+msgstr "<span>Codigo de seguridad: kHs8Zu</span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span>IVA al día</span>"
+msgstr "<span>IVA al día</span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "<span>Nro. de CAI 90190425747. Rango: serie A N° 125 al 300</span>"
+msgstr "<span>Nro. de CAI 90190425747. Rango: serie A N° 125 al 300</span>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.actions.report,name:account_invoice_adaly_report.action_custom_invoice_report
+msgid "Adaly Invoice Report"
+msgstr "Adaly Invoice Report"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "CONSUMIDOR FINAL"
+msgstr "CONSUMIDOR FINAL"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Cantidad"
+msgstr "Cantidad"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Crédito"
+msgstr "Crédito"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "DATOS BANCARIOS"
+msgstr "DATOS BANCARIOS"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "DOMICILIO"
+msgstr "DOMICILIO"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Datos para recibir transferencia: <br/>"
+msgstr "Datos para recibir transferencia: <br/>"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Desc"
+msgstr "Desc"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "FECHA DE DOCUMENTO"
+msgstr "FECHA DE DOCUMENTO"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "FORMA DE PAGO"
+msgstr "FORMA DE PAGO"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "IDENTIFICADOR DE COMPRA"
+msgstr "IDENTIFICADOR DE COMPRA"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Importe US$"
+msgstr "Importe US$"
+
+#. module: account_invoice_adaly_report
+#: model:ir.model,name:account_invoice_adaly_report.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "MONEDA"
+msgstr "MONEDA"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "N/A"
+msgstr "N/A"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "NOMBRE"
+msgstr "NOMBRE"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "NÚMERO"
+msgstr "NÚMERO"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "OBSERVACIONES"
+msgstr "OBSERVACIONES"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "P. Unitario US$"
+msgstr "P. Unitario US$"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_adaly_report
+msgid "Print Voucher"
+msgstr "Imprimir Voucher"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "RUT EMISOR"
+msgstr "RUT EMISOR"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Rec"
+msgstr "Rec"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "SERIE"
+msgstr "SERIE"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "TIPO DE DOCUMENTO"
+msgstr "TIPO DE DOCUMENTO"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "Uni"
+msgstr "Uni"
+
+#. module: account_invoice_adaly_report
+#: model:ir.ui.view,arch_db:account_invoice_adaly_report.account_invoice_custom_page
+msgid "VENCIMIENTO"
+msgstr "VENCIMIENTO"
+
