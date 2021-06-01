@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-28 20:24+0000\n"
-"PO-Revision-Date: 2021-05-28 20:24+0000\n"
+"POT-Creation-Date: 2021-06-01 22:38+0000\n"
+"PO-Revision-Date: 2021-06-01 22:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,5 +18,17 @@ msgstr ""
 #. module: account_invoice_associate
 #: model:ir.model.fields,field_description:account_invoice_associate.field_account_invoice_associate_id
 #: model:ir.ui.view,arch_db:account_invoice_associate.base_inherit_partner
+#: model:ir.ui.view,arch_db:account_invoice_associate.invoice_search
 msgid "Associate"
 msgstr "Socio"
+
+#. module: account_invoice_associate
+#: model:ir.model,name:account_invoice_associate.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_invoice_associate
+#: model:ir.model.fields,help:account_invoice_associate.field_account_invoice_associate_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "El usuario interno encargado de comunicarse con este contacto si lo hubiese."
+
