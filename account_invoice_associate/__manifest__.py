@@ -26,7 +26,7 @@
     },
 
     # any module necessary for this one to work correctly
-    'depends': ['account_invoice'],
+    'depends': ['account_invoicing'],
 
 
      'data': [

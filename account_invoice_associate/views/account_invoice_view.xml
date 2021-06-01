@@ -29,7 +29,7 @@
         </field>
     </record>
 
-    <record id="invoice_tree" model="ir.ui.view">
+    <record id="invoice_search" model="ir.ui.view">
         <field name="model">account.invoice</field>
         <field name="name">account.invoice.select</field>
         <field name="inherit_id" ref="account.view_account_invoice_filter" />
@@ -40,6 +40,10 @@
             <field name="user_id" position = "after">
                 <field name="associate_id" domain="[('share','=', False)]" />
             </field>
+            <xpath expr="//group/filter[2]" position="attributes">
+                <attribute name="name">Associate</attribute>
+                <attribute name="string">Associate</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
