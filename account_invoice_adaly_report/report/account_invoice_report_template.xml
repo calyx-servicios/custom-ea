@@ -258,7 +258,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5" style="border: 1px solid;border-left: none;">
+                    <div class="col-md-5" style="border: 1px solid;border-left: none;min-height: 132px;">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">DATOS BANCARIOS</h5>

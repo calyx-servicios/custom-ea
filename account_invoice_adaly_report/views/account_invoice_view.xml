@@ -7,7 +7,7 @@
             <field name="model">account.invoice</field>
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//button[@name='invoice_print']" position="after">
+                <xpath expr="//button[@name='action_invoice_sent']" position="after">
                     <button name="print_account_adaly_voucher" string="Print Voucher" type="object" class="oe_highlight" groups="base.group_user"/>
                 </xpath>
             </field>
