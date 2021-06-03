@@ -57,7 +57,7 @@
                         <td colspan="2">
                             <t t-esc="res_company.main_id_number"/>
                         </td>
-                        <td colspan="2" style="color:red">
+                        <td colspan="2">
                             <t t-esc="doc.journal_document_type_id.document_type_id.report_name"/>
                         </td>
                     </tr>
@@ -68,15 +68,15 @@
                         <th style="text-align:center;background:#A2AFC2">VENCIMIENTO</th>
                     </tr>
                     <tr>
-                        <td style="color:red">
+                        <td>
                             <t t-esc="doc.document_sequence_id.prefix"/>
                         </td>
-                        <td style="color:red">
+                        <td>
                             <t t-esc="doc.document_number"/>
                         </td>
                         <td>Crédito</td>
-                        <td style="color:red">
-                            <t t-esc="doc.date_due"/>
+                        <td>
+                            <span t-field="doc.date_due" t-field-options='{"format": "dd/MM/YYYY"}'/>
                         </td>
                     </tr>
                     <tr style="color:white">
@@ -95,10 +95,10 @@
                         <th colspan="2" style="text-align:center;background:#A2AFC2">DOMICILIO</th>
                     </tr>
                     <tr>
-                        <td colspan="2" style="color:red">
+                        <td colspan="2">
                             <t t-esc="doc.partner_id.name"/>
                         </td>
-                        <td colspan="2" style="color:red">
+                        <td colspan="2">
                             <t t-esc="doc.partner_id.street"/>
                             <t t-esc="doc.partner_id.state_id.name"/>
                             <t t-esc="doc.partner_id.country_id.name"/>
@@ -109,10 +109,10 @@
                         <th colspan="2" style="text-align:center;background:#A2AFC2">MONEDA</th>
                     </tr>
                     <tr>
-                        <td colspan="2" style="color:red">
-                            <t t-esc="doc.date_invoice"/>
+                        <td colspan="2">
+                            <span t-field="doc.date_invoice" t-field-options='{"format": "dd/MM/YYYY"}'/>
                         </td>
-                        <td colspan="2" style="color:red">
+                        <td colspan="2">
                             <t t-esc="doc.currency_id.name"/>
                         </td>
                     </tr>
@@ -135,26 +135,28 @@
                     </thead>
                     <tbody>
                         <t t-foreach="doc.invoice_line_ids" t-as="line">
-                            <td style="color:red">
-                                <t t-esc="line.name"/>
-                            </td>
-                            <td>N/A</td>
-                            <td style="color:red">
-                                <t t-esc="line.quantity"/>
-                            </td>
-                            <td style="color:red">
-                                <t t-esc="line.price_unit"/>
-                            </td>
-                            <td>
-                                <t t-esc="line.discount"/>
-                            </td>
-                            <td>0,00</td>
-                            <td style="color:red">
-                                <t t-esc="line.quantity"/>
-                            </td>
-                            <td style="color:red">
-                                <t t-esc="line.price_total"/>
-                            </td>
+                            <tr>
+                                <td>
+                                    <t t-esc="line.name"/>
+                                </td>
+                                <td>N/A</td>
+                                <td>
+                                    <t t-esc="'{:,.2f}'.format(line.quantity)"/>
+                                </td>
+                                <td>
+                                    <t t-esc="'{:,.2f}'.format(line.price_unit)"/>
+                                </td>
+                                <td>
+                                    <t t-esc="'{:,.2f}'.format(line.discount)"/>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <t t-esc="'{:,.2f}'.format(line.quantity)"/>
+                                </td>
+                                <td>
+                                    <t t-esc="'{:,.2f}'.format(line.price_total)"/>
+                                </td>
+                            </tr>
                         </t>
                     </tbody>
                 </table>
@@ -162,51 +164,51 @@
         </div>
 
         <div class="row text-right">
-            <div class="col-md-5">
+            <div class="col-md-4">
             </div>
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-8">
                                 <span style="font-weight:bold;">Subtotal gravado (22%): </span>
                             </div>
-                            <div class="col-md-4" style="color:red">
-                                0,00
+                            <div class="col-md-4">
+                                0.00
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <span style="font-weight:bold;">Total IVA (22%): </span>
                             </div>
-                            <div class="col-md-4" style="color:red">
-                                <t t-esc="doc.amount_tax"/>
+                            <div class="col-md-5">
+                                <t t-esc="'{:,.2f}'.format(doc.amount_tax)"/>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <span style="font-weight:bold;">Monto Total: </span>
                             </div>
-                            <div class="col-md-4" style="color:red">
-                                <t t-esc="doc.amount_untaxed"/>
+                            <div class="col-md-5">
+                                <t t-esc="'{:,.2f}'.format(doc.amount_untaxed)"/>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <span style="font-weight:bold;">No facturable: </span>
                             </div>
-                            <div class="col-md-4" style="color:red">
-                                0,00
+                            <div class="col-md-5">
+                                0.00
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <span style="font-weight:bold;">TOTAL A PAGAR: </span>
                             </div>
-                            <div class="col-md-4" style="color:red">
-                                <t t-esc="doc.amount_total"/>
+                            <div class="col-md-5">
+                                <t t-esc="'{:,.2f}'.format(doc.amount_total)"/>
                             </div>
                         </div>
                     </div>
@@ -252,7 +254,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">OBSERVACIONES</h5>
-                                <p class="card-text" style="color:red">
+                                <p class="card-text">
                                     <t t-esc="doc.legend_in_document"/>
                                 </p>
                             </div>
@@ -268,7 +270,7 @@
                                         <t t-esc="bank.bank_id.name"/><br/>
                                         <t t-esc="bank.partner_id.name"/><br/>
                                         Cta. Corriente Nro. <t t-esc="bank.acc_number"/><br/>
-                                        Swift <t t-esc="bank.cbu"/>
+                                        Swift <t t-esc="bank.bank_id.bic"/>
                                     </t>
                                 </p>
                             </div>
