@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <data noupdate="1">
+    <data>
 
         <record id="account_invoice_adaly_report" model="ir.ui.view">
             <field name="name">Adaly Voucher Button</field>
@@ -8,7 +8,11 @@
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='action_invoice_sent']" position="after">
-                    <button name="print_account_adaly_voucher" string="Print Voucher" type="object" class="oe_highlight" groups="base.group_user"/>
+                    <button name="print_account_adaly_voucher" string="Print Voucher" type="object" class="oe_highlight" groups="base.group_user" attrs="{'invisible': [('keep_company_adaly', '=', False)]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='date_invoice']" position="after">
+                    <field name="keep_company_adaly" invisible="1"/>
                 </xpath>
             </field>
         </record>
