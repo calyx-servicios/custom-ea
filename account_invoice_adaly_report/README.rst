@@ -23,7 +23,7 @@ Adaly Invoice Report
 
 .. !!! Description must be max 2-3 paragraphs, and is required.
 
-This module create a new button to get a voucher PDF report from invoice.
+This module create a new button to get a voucher PDF report from invoice and adds a new image field in account invoice for qr.
 
 **Table of contents**
 
