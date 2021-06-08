@@ -14,6 +14,11 @@
                 <xpath expr="//field[@name='date_invoice']" position="after">
                     <field name="keep_company_adaly" invisible="1"/>
                 </xpath>
+
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="qr_image" widget="image" attrs="{'invisible': [('keep_company_adaly', '=', False)]}" class="oe_avatar" options="{&quot;size&quot;: [45, 45]}"/>
+                </xpath>
+
             </field>
         </record>
 
