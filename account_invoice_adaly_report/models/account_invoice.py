@@ -1,9 +1,6 @@
 # Copyright 2021 Calyx S.A.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 from odoo import models, api, fields
-import logging
-
-_logger = logging.getLogger(__name__)
 
 
 class AccountInvoice(models.Model):
@@ -11,11 +8,15 @@ class AccountInvoice(models.Model):
 
     @api.multi
     def _current_company_adaly(self):
+        """
+        This function check if the company of the current user
+        is "Adaly SA"
+        I have to use the id number because the company was create
+        by interface.
+        18 is the company id number of Adaly in production.
+        """
         for rec in self:
-            _logger.info("here")
-            _logger.info("USER: %s" % self.env.user.company_id.id)
             if self.env.user.company_id.id == 18:
-                _logger.info("entro")
                 flag = True
             else:
                 flag = False
@@ -31,3 +32,5 @@ class AccountInvoice(models.Model):
     keep_company_adaly = fields.Boolean(
         string="Adaly", compute="_current_company_adaly"
     )
+
+    qr_image = fields.Binary("QR Image", attachment=True)

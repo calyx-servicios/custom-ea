@@ -20,7 +20,7 @@
         id="action_custom_invoice_report"
         string="Adaly Invoice Report"
         model="account.invoice" 
-        report_type="qweb-html"
+        report_type="qweb-pdf"
         file="account_invoice_adaly_report.adaly_invoice_report" 
         name="account_invoice_adaly_report.adaly_invoice_report"
         paperformat="account_invoice_adaly_report.paperformat_account_invoice_custom_report"
