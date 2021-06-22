@@ -13,6 +13,6 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["l10n_ar_account_reports"],
+    "depends": ["l10n_ar_account_reports","account_invoice_associate"],
     "data": [],
 }

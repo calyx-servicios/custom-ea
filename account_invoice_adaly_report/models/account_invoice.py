@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 from odoo import models, api, fields
 
+from . import conversor
 
 class AccountInvoice(models.Model):
     _inherit = "account.invoice"
@@ -34,3 +35,10 @@ class AccountInvoice(models.Model):
     )
 
     qr_image = fields.Binary("QR Image", attachment=True)
+
+    def n_to_string(self, number):
+        if type(number) == int or type(number) == float:
+            number_string = conversor.to_word(number)
+            return number_string
+        else:
+            return False

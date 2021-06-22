@@ -133,7 +133,7 @@ class ReportAccountAgedPartner(models.AbstractModel):
                         or ""
                     )
                     nv.append(days_due)
-                    nv.append(aml.invoice_id.user_id.name)
+                    nv.append(aml.invoice_id.associate_id.name)
 
                     for i in range(7):
                         val = (
@@ -160,12 +160,6 @@ class ReportAccountAgedPartner(models.AbstractModel):
                             for v in [
                                 x
                                 for x in nv
-                                # line["period"] == 6 - i
-                                # and self.format_value(
-                                #     sign * line["amount"]
-                                # )
-                                # or ""
-                                # for i in range(7)
                             ]
                         ],
                         "action_context": aml.get_action_context(),
