@@ -63,7 +63,7 @@
                     </tr>
                     <tr style="color:white">
                         <th style="text-align:center;background:#A2AFC2">SERIE</th>
-                        <th style="text-align:center;background:#A2AFC2">NÚMERO</th>
+                        <th style="text-align:center;background:#A2AFC2" width="40%">NÚMERO</th>
                         <th style="text-align:center;background:#A2AFC2">FORMA DE PAGO</th>
                         <th style="text-align:center;background:#A2AFC2">VENCIMIENTO</th>
                     </tr>
@@ -122,9 +122,9 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <table class="table table-bordered" style="width:100%;border-collapse:collapse;text-align:center;">
+                <table class="table table-bordered" style="width:100%;border-collapse:collapse;text-align:left;">
                     <thead style="color:white">
-                        <th style="text-align:center;background:#A2AFC2" width="30%">Descripción</th>
+                        <th style="text-align:left;background:#A2AFC2" width="30%">Descripción</th>
                         <th style="text-align:center;background:#A2AFC2" width="5%">Uni</th>
                         <th style="text-align:center;background:#A2AFC2" width="5%">*</th>
                         <th style="text-align:center;background:#A2AFC2" width="15%">P. Unitario US$</th>
@@ -213,7 +213,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <span t-esc="doc.n_to_string(doc.amount_total)"/>
+                                <span t-esc="doc.n_to_string(doc.amount_total)"/><t t-esc="doc.currency_id.name"/>
                             </div>
                         </div>
                     </div>
