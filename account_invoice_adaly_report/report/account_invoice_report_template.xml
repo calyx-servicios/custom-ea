@@ -62,9 +62,9 @@
                         </td>
                     </tr>
                     <tr style="color:white">
-                        <th style="text-align:center;background:#A2AFC2">SERIE</th>
-                        <th style="text-align:center;background:#A2AFC2" width="40%">NÚMERO</th>
-                        <th style="text-align:center;background:#A2AFC2">FORMA DE PAGO</th>
+                        <th style="text-align:center;background:#A2AFC2" width="20%">SERIE</th>
+                        <th style="text-align:center;background:#A2AFC2" width="38%">NÚMERO</th>
+                        <th style="text-align:center;background:#A2AFC2" width="20%">FORMA DE PAGO</th>
                         <th style="text-align:center;background:#A2AFC2">VENCIMIENTO</th>
                     </tr>
                     <tr>
@@ -213,7 +213,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <span t-esc="doc.n_to_string(doc.amount_total)"/><t t-esc="doc.currency_id.name"/>
+                                <span t-esc="doc.n_to_string(doc.amount_total)"/><span> </span><t t-esc="doc.currency_id.name"/>
                             </div>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">OBSERVACIONES</h5>
                                 <p class="card-text">
-                                    <t t-esc="doc.legend_in_document"/>
+                                    <pre style="text-align:left;background:#ffffff"><t t-esc="doc.legend_in_document"/></pre>
                                 </p>
                             </div>
                         </div>
