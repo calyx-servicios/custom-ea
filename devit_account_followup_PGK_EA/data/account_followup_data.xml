@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- Plantilla modificable Payment Follow up -->
+        <record id="modifiable_payment_follow_up_template_pgk"
+                model="mail.template">
+            <field name="name">Modifiable Payment Follow up template pgk
+            </field>
+            <field name="email_from">${(user.email or '')|safe}</field>
+            <field name="subject">${user.company_id.name} Payment Reminder
+            </field>
+            <field name="email_to">${object.email|safe}</field>
+            <field name="lang">${object.lang}</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html"><![CDATA[
+<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+    
+    <p>Dear ${object.name},</p>
+    <p>
+    We want to inform you that according to our records the expiration of the invoice (s) detailed below in the table below is close to due.
+
+We would be grateful if you could inform us of the expected payment date for the cancellation of the indicated invoices.
+If they have already been canceled at the time of receiving this letter, please let us know at cobranzas@pgyk.com.ar or by phone at 6091-8950
+Likewise, in the aforementioned means of contact you can evacuate any concern that you may have inherent to the status of your account and current debts.
+
+Without further ado, we sincerely greet you.
+
+PGK Group
+    </p>
+<br/>
+Best Regards,
+<br/>
+<br/>
+${user.name}
+<br/>
+<br/>
+
+${object.get_followup_table_html() | safe}
+
+<br/>
+</div>
+            ]]></field>
+        </record>
+    </data>
+</odoo>

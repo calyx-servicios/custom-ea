@@ -213,7 +213,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <span t-esc="doc.n_to_string(doc.amount_total)"/><span> </span><t t-esc="doc.currency_id.name"/>
+                                <span t-esc="doc.n_to_string(doc.amount_total)"/>&#160;<t t-esc="doc.currency_id.name"/>
                             </div>
                         </div>
                     </div>
