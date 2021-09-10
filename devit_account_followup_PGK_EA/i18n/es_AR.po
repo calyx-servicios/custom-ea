@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* devit_account_followup_PGK_EA
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-09 17:24+0000\n"
+"PO-Revision-Date: 2021-09-09 17:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: devit_account_followup_PGK_EA
+#: model:mail.template,body_html:devit_account_followup_PGK_EA.modifiable_payment_follow_up_template_pgk
+msgid "\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"    \n"
+"    <p>Dear ${object.name},</p>\n"
+"    <p>\n"
+"    We want to inform you that according to our records the expiration of the invoice (s) detailed below in the table below is close to due.\n"
+"\n"
+"We would be grateful if you could inform us of the expected payment date for the cancellation of the indicated invoices.\n"
+"If they have already been canceled at the time of receiving this letter, please let us know at cobranzas@pgyk.com.ar or by phone at 6091-8950\n"
+"Likewise, in the aforementioned means of contact you can evacuate any concern that you may have inherent to the status of your account and current debts.\n"
+"\n"
+"Without further ado, we sincerely greet you.\n"
+"\n"
+"PGK Group\n"
+"    </p>\n"
+"<br/>\n"
+"Best Regards,\n"
+"<br/>\n"
+"<br/>\n"
+"${user.name}\n"
+"<br/>\n"
+"<br/>\n"
+"\n"
+"${object.get_followup_table_html() | safe}\n"
+"\n"
+"<br/>\n"
+"</div>\n"
+"            "
+msgstr "\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"    \n"
+"    <p>Estimado ${object.name},</p>\n"
+"    <p>\n"
+"    Queremos informarle que según nuestros registros se encuentra próximo el vencimiento de la/s factura/s  a continuación detalladas en el cuadro debajo.\n"
+"\n"
+"Le agradeceremos puedan informarnos fecha de pago prevista, para la cancelación de las facturas indicadas.\n"
+"Si las mismas ya fueron canceladas al momento de recibir la presente, por favor hacerlo saber al correo cobranzas@pgyk.com.ar o telefónicamente al 6091-8950\n"
+"Así mismo en los citados medios de contacto podrá evacuar cualquier inquietud que pudieran tener inherente al estado de su cuenta y deudas vigentes.\n"
+"\n"
+"Sin otro particular, los saludamos atentamente.\n"
+"\n"
+"Grupo PGK\n"
+"    </p>\n"
+"<br/>\n"
+"Atentamente,\n"
+"<br/>\n"
+"<br/>\n"
+"${user.name}\n"
+"<br/>\n"
+"<br/>\n"
+"\n"
+"${object.get_followup_table_html() | safe}\n"
+"\n"
+"<br/>\n"
+"</div>\n"
+"            "
+
+#. module: devit_account_followup_PGK_EA
+#: model:mail.template,subject:devit_account_followup_PGK_EA.modifiable_payment_follow_up_template_pgk
+msgid "${user.company_id.name} Payment Reminder\n"
+"            "
+msgstr "${user.company_id.name} Recordatorio de pago\n"
+"            "
+
+#. module: devit_account_followup_PGK_EA
+#: model:ir.model,name:devit_account_followup_PGK_EA.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: devit_account_followup_PGK_EA
+#: code:addons/devit_account_followup_PGK_EA/models/account_followup.py:78
+#, python-format
+msgid "Email not sent because of email address of partner not filled in"
+msgstr "Email not sent because of email address of partner not filled in"
+
+#. module: devit_account_followup_PGK_EA
+#: model:ir.model,name:devit_account_followup_PGK_EA.model_devit_account_followup_followup_line
+msgid "Follow-up Criteria"
+msgstr "Criterios de seguimiento"
+
+#. module: devit_account_followup_PGK_EA
+#: code:addons/devit_account_followup_PGK_EA/models/account_followup.py:74
+#, python-format
+msgid "Overdue email sent to %s, "
+msgstr "Overdue email sent to %s, "
