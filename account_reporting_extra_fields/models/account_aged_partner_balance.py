@@ -120,7 +120,8 @@ class ReportAccountAgedPartner(models.AbstractModel):
                     elif aml.payment_id:
                         caret_type = "account.payment"
                         days_due = ""
-
+                    else:
+                        days_due = ""
                     nv = []
                     nv.append(
                         format_date(
