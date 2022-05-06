@@ -102,6 +102,7 @@ class ReportAccountAgedPartner(models.AbstractModel):
                 "unfolded_lines"
             ):
                 for line in amls[values["partner_id"]]:
+                    days_due = ""
                     aml = line["line"]
                     caret_type = "account.move"
                     if aml.invoice_id:
@@ -120,7 +121,6 @@ class ReportAccountAgedPartner(models.AbstractModel):
                     elif aml.payment_id:
                         caret_type = "account.payment"
                         days_due = ""
-
                     nv = []
                     nv.append(
                         format_date(
