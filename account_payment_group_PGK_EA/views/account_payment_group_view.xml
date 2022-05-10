@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="view_account_payment_group_search_PGK_EA" model="ir.ui.view">
+        <field name="name">account.payment.group.search_PGK_EA</field>
+        <field name="model">account.payment.group</field>
+        <field name="inherit_id" ref="account_payment_group.view_account_payment_group_search"/>
+        <field name="arch" type="xml">
+            <filter name='not_cancelled' position="after">
+                <filter string="No matched moves" domain="[('matched_move_line_ids_qty','=',0)]" name='not_matched_moves'/>
+            </filter>
+        </field>
+    </record>
+
+
+</odoo>
