@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_payment_group_PGK_EA
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20210922\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-06 12:48+0000\n"
+"PO-Revision-Date: 2022-05-06 10:10-0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Language: es_AR\n"
+
+#. module: account_payment_group_PGK_EA
+#: model:ir.model.fields,field_description:account_payment_group_PGK_EA.field_account_payment_group_matched_move_line_ids_qty
+msgid "Matched Move Lines Qty"
+msgstr ""
+
+#. module: account_payment_group_PGK_EA
+#: model:ir.ui.view,arch_db:account_payment_group_PGK_EA.view_account_payment_group_search_PGK_EA
+msgid "No matched moves"
+msgstr "Sin Comp. Imputados"
+
+#. module: account_payment_group_PGK_EA
+#: model:ir.model,name:account_payment_group_PGK_EA.model_account_payment_group
+msgid "Payment Group"
+msgstr ""
